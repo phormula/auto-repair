@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AutoRepair</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'main', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="app-container app-theme-white fixed-sidebar fixed-header fixed-footer body-tabs-line">
+      <%= render "layouts/header" %>
+      <div class="app-main">
+        <%= render "layouts/sidebar" %>
+        <div class="app-main__outer">
+    <%= yield %>
+    <%= render "layouts/footer" %>
+        </div>
+        <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+      </div>
+    </div>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</body>
+</html>
+<%= render "layouts/modal" %>
